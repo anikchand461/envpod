@@ -1,0 +1,30 @@
+[project]
+name = "envpod"                            # ← changed
+version = "0.1.0"
+description = "Local development environment synchronizer"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Anik Chand", email = "anikchand461@gmail.com"}]
+dependencies = [
+    "typer>=0.12.0",
+    "PyYAML>=6.0",
+    "python-dotenv>=1.0",
+    "pydantic>=2.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+envpod = "envbox.main:app"                 # ← CLI command changed to envpod
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["envbox"]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "--import-mode=importlib"
+testpaths = ["tests"]
