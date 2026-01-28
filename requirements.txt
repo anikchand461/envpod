@@ -1,0 +1,13 @@
+# Core runtime dependencies (should match pyproject.toml)
+typer>=0.12.0
+PyYAML>=6.0.2
+python-dotenv>=1.0.1
+pydantic>=2.9.0
+rich>=13.9.0
+
+# Development & testing tools
+ruff>=0.7.0
+pytest>=8.3.0
+pytest-cov>=5.0.0
+mypy>=1.11.2
+types-PyYAML>=6.0.12

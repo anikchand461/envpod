@@ -1,0 +1,18 @@
+# envsync.yaml.example – copy to envsync.yaml in your project
+name: my-project
+
+python: "3.11"                  # exact version or "3.11", "system"
+
+dependencies:
+  file: requirements.txt
+
+env_file: .env
+
+secrets:                        # optional
+  - DATABASE_URL
+  - API_KEY
+
+run:
+  dev: "uvicorn main:app --reload --port 8000"
+  # lint: "ruff check ."
+  # test: "pytest"
