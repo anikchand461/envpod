@@ -266,11 +266,9 @@ def run(
             cmd.split(),
             cwd=project_root,
             check=True,
-            capture_output=True,
+            capture_output=False,
             text=True
         )
-        console.print(result.stdout)
-        console.print("[green]Command completed successfully[/green]")
     except subprocess.CalledProcessError as e:
         console.print(f"[red]Command failed:[/red]\n{e.stderr}")
         raise typer.Exit(1)
