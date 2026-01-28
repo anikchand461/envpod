@@ -1,0 +1,5 @@
+# envsync managed environments
+.envsync/
+
+# envpod managed environments
+.envpod/
