@@ -1,6 +1,6 @@
 [project]
-name = "envpod"                            # ← changed
-version = "0.1.0"
+name = "envpod"
+version = "1.0.0"
 description = "Local development environment synchronizer"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-envpod = "envbox.main:app"                 # ← CLI command changed to envpod
+envpod = "envbox.main:app"
 
 [build-system]
 requires = ["hatchling"]
